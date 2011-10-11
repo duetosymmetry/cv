@@ -4,9 +4,11 @@
 
 \oddsidemargin -.5in
 \evensidemargin -.5in
-\topmargin -.2in
+\voffset -25pt
+%\topmargin -.2in
+\headsep 25pt
 \textwidth=6.0in
-\textheight=9.5in
+\textheight=9.3in
 \itemsep=0in
 \parsep=0in
 
@@ -23,6 +25,9 @@
       \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
       \setlength{\leftmargin}{0.2in}}}{\end{list}}
 
+% Headings
+\pagestyle{myheadings}
+\markright{Leo C. Stein --- Cirriculum Vitae}
 
 \begin{document}
 
@@ -31,6 +36,8 @@
 \settowidth{\mynamewidth}{\namefont\myname}
 
 \name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \myname \vspace*{.1in}}
+% On the first page, have no header.
+\thispagestyle{empty}
 
 \begin{resume}
 \section{\sc Contact Information}
