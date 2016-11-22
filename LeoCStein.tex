@@ -1,8 +1,12 @@
+\let\nofiles\relax % This is because res says to not emit aux files,
+                   % but lastpage needs aux files.
 \documentclass[margin,line]{res}
 \usepackage[colorlinks=true]{hyperref}
 \usepackage[T1]{fontenc}
 \usepackage{microtype}
 \usepackage{amsmath,amssymb}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
 
 \oddsidemargin -.5in
 \evensidemargin -.5in
@@ -15,12 +19,19 @@
 \parsep=0in
 
 % Headings
-\pagestyle{myheadings}
-\markright{Leo C. Stein --- Curriculum Vitae}
+\pagestyle{fancy}
+\lhead{Leo C.~Stein --- Curriculum Vitae}
+\chead{}
+\rhead{\thepage\ of \pageref*{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
 
 \begin{document}
 
-\newcommand{\myname}{Leo C. Stein}
+\newcommand{\myname}{Leo C.~Stein}
 \newlength{\mynamewidth}
 \settowidth{\mynamewidth}{\namefont\myname}
 
