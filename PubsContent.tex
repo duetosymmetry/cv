@@ -1,7 +1,12 @@
 \newcommand{\arxiv}[1]{[\href{http://arxiv.org/abs/#1}{arXiv:#1}]}
 
+\newcounter{numPubs}
+\newcounter{pubCounter}
+
+\setcounter{numPubs}{30}
+
 \section{\sc Publications in Progress}
-\begin{etaremune}
+\begin{etaremune}[start=\value{numPubs}]
 \item
   Isi,~M., {\bf Stein,~L.~C.}
   (2018)
@@ -15,6 +20,7 @@
   {\bf Stein,~L.~C.},
   (2018)
   {\it Cosmological perturbations in dynamical Chern-Simons}.
+  \setcounter{pubCounter}{\value{enumi}}
 \end{etaremune}
 
 % \section{\sc Submitted Publications}
@@ -42,7 +48,8 @@ collaboration publications. The short author-list publications appear
 below.
 
 \section{\sc Refereed Publications}
-\begin{etaremune}
+\addtocounter{pubCounter}{-1}
+\begin{etaremune}[start=\value{pubCounter}]
 \item
   Chen,~B., {\bf Stein,~L.~C.}
   (2017)
@@ -185,10 +192,12 @@ below.
     discriminating gravitational-wave bursts from instrumental noise},\\
   \href{http://dx.doi.org/10.1103/PhysRevD.74.082005}{Phys.~Rev.~D~{\bf 74}~082005}
   \arxiv{gr-qc/0605002}
+  \setcounter{pubCounter}{\value{enumi}}
 \end{etaremune}
 
 \section{\sc Unrefereed Publications}
-\begin{etaremune}
+\addtocounter{pubCounter}{-1}
+\begin{etaremune}[start=\value{pubCounter}]
 \item
   Galley,~C.~R., Tsang,~D., {\bf Stein,~L.~C.}
   (2014)
