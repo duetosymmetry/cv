@@ -1,0 +1,32 @@
+name: LaTeX build
+on:
+  push:
+    branches-ignore:
+      - 'gh-action-result/pdflatex'
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: |
+              LeoCStein.tex
+              LeoCStein-PubsOnly.tex
+              LeoCStein-NoPubs.tex
+      - name: Commit to orphan branch
+        run: |
+          git checkout --orphan gh-action-result/pdflatex
+          git rm -rf .
+          git add LeoCStein.pdf
+          git add LeoCStein-PubsOnly.pdf
+          git add LeoCStein-NoPubs.pdf
+          git -c user.name='GitHub Action' -c user.email='action@github.com' commit -m "Built paper"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-action-result/pdflatex
+          force: true
