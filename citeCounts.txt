@@ -1,71 +1,74 @@
-ARXIV:2007.13799: 4 citations
-doi:10.1103/PhysRevD.101.064007: 6 citations
-doi:10.1103/PhysRevD.101.104016: 20 citations
-doi:10.21105/joss.01683: 7 citations
-doi:10.1103/PhysRevD.100.104026: 27 citations
-doi:10.1103/PhysRevResearch.1.033015: 70 citations
-doi:10.1088/1361-6382/ab34e2: 82 citations
+ARXIV:2101.11153: 3 citations
+doi:10.1103/PhysRevD.103.064066: 1 citations
+ARXIV:2007.13799: 6 citations
+doi:10.1088/1361-6382/abcfd2: 1 citations
+doi:10.1103/PhysRevD.101.064007: 7 citations
+doi:10.1103/PhysRevD.101.104016: 24 citations
+doi:10.21105/joss.01683: 9 citations
+doi:10.1103/PhysRevD.100.104026: 34 citations
+doi:10.1103/PhysRevResearch.1.033015: 82 citations
+doi:10.1088/1361-6382/ab34e2: 91 citations
 doi:10.1088/1361-6382/ab0ee9: 1 citations
-doi:10.1103/PhysRevLett.122.011101: 36 citations
+doi:10.1103/PhysRevLett.122.011101: 42 citations
 doi:10.1103/PhysRevD.98.104025: 18 citations
-doi:10.1088/1361-6382/ab0587: 277 citations
-doi:10.1103/PhysRevD.98.021503: 27 citations
-doi:10.1103/PhysRevD.97.104049: 26 citations
-doi:10.1103/PhysRevD.97.084012: 6 citations
-doi:10.1103/PhysRevD.96.064017: 4 citations
-doi:10.1103/PhysRevD.96.044020: 67 citations
+doi:10.1088/1361-6382/ab0587: 290 citations
+doi:10.1103/PhysRevD.98.021503: 30 citations
+doi:10.1103/PhysRevD.97.104049: 28 citations
+doi:10.1103/PhysRevD.97.084012: 7 citations
+doi:10.1103/PhysRevD.96.064017: 5 citations
+doi:10.1103/PhysRevD.96.044020: 71 citations
 doi:10.1142/9789813148505_0052: 5 citations
-doi:10.1088/0264-9381/33/5/054001: 101 citations
+doi:10.1088/0264-9381/33/5/054001: 106 citations
 doi:10.1103/PhysRevD.93.104007: 10 citations
-doi:10.1088/0264-9381/33/23/235013: 26 citations
-doi:10.1103/PhysRevD.93.024010: 66 citations
-doi:10.1088/2041-8205/809/1/L9: 3 citations
-doi:10.1088/0264-9381/32/24/243001: 726 citations
-ARXIV:1412.3082: 32 citations
-doi:10.1103/PhysRevD.90.044061: 33 citations
+doi:10.1088/0264-9381/33/23/235013: 30 citations
+doi:10.1103/PhysRevD.93.024010: 70 citations
+doi:10.1088/2041-8205/809/1/L9: 5 citations
+doi:10.1088/0264-9381/32/24/243001: 752 citations
+ARXIV:1412.3082: 33 citations
+doi:10.1103/PhysRevD.90.044061: 36 citations
 ARXIV:1407.0744: 7 citations
 doi:10.1103/PhysRevD.90.063010: 58 citations
 doi:10.1088/0004-637X/788/1/15: 51 citations
-doi:10.1103/PhysRevD.89.044026: 21 citations
-doi:10.1103/PhysRevD.87.084058, 10.1103/PhysRevD.93.089909: 63 citations
-doi:10.1088/0004-637X/760/1/12: 128 citations
-doi:10.1103/PhysRevD.85.122007: 122 citations
-doi:10.1103/PhysRevD.85.102004: 65 citations
+doi:10.1103/PhysRevD.89.044026: 22 citations
+doi:10.1103/PhysRevD.87.084058, 10.1103/PhysRevD.93.089909: 66 citations
+doi:10.1088/0004-637X/760/1/12: 131 citations
+doi:10.1103/PhysRevD.85.122007: 125 citations
+doi:10.1103/PhysRevD.85.102004: 67 citations
 doi:10.1051/0004-6361/201218860: 85 citations
 doi:10.1103/PhysRevD.85.122001: 55 citations
-doi:10.1103/PhysRevD.93.029902, 10.1103/PhysRevD.85.064022: 109 citations
-doi:10.1103/PhysRevLett.107.271102: 96 citations
-doi:10.1103/PhysRevD.83.104027: 113 citations
-doi:10.1103/PhysRevD.86.069903, 10.1103/PhysRevD.85.089904, 10.1103/PhysRevD.83.122005: 119 citations
-doi:10.1103/PhysRevD.83.104002: 137 citations
+doi:10.1103/PhysRevD.93.029902, 10.1103/PhysRevD.85.064022: 112 citations
+doi:10.1103/PhysRevLett.107.271102: 98 citations
+doi:10.1103/PhysRevD.83.104027: 118 citations
+doi:10.1103/PhysRevD.86.069903, 10.1103/PhysRevD.85.089904, 10.1103/PhysRevD.83.122005: 120 citations
+doi:10.1103/PhysRevD.83.104002: 144 citations
 doi:10.1103/PhysRevD.83.064038: 53 citations
-doi:10.1103/PhysRevD.83.042001, 10.1103/PhysRevD.83.069902, 10.1103/PhysRevD.85.089902: 53 citations
+doi:10.1103/PhysRevD.83.042001, 10.1103/PhysRevD.83.069902, 10.1103/PhysRevD.85.089902: 54 citations
 doi:10.1016/j.nima.2010.07.089: 129 citations
-doi:10.1088/0004-637X/722/2/1504: 117 citations
-doi:10.1103/PhysRevD.85.089903, 10.1103/PhysRevD.82.102001: 140 citations
-doi:10.1088/0264-9381/27/17/173001: 973 citations
+doi:10.1088/0004-637X/722/2/1504: 121 citations
+doi:10.1103/PhysRevD.85.089903, 10.1103/PhysRevD.82.102001: 141 citations
+doi:10.1088/0264-9381/27/17/173001: 981 citations
 ARXIV:1003.2481: 37 citations
-doi:10.1103/PhysRevD.85.089905, 10.1103/PhysRevD.81.102001: 132 citations
+doi:10.1103/PhysRevD.85.089905, 10.1103/PhysRevD.81.102001: 136 citations
 doi:10.1088/0004-637X/715/2/1453: 118 citations
 doi:10.1111/j.1365-2966.2010.17587.x: 4 citations
-doi:10.1038/nature08278: 316 citations
-doi:10.1088/0004-637X/713/1/671: 190 citations
-doi:10.1088/1367-2630/11/7/073032: 44 citations
-doi:10.1088/0004-637X/715/2/1438: 103 citations
-doi:10.1088/1367-2630/12/5/053034: 90 citations
-doi:10.1103/PhysRevD.80.047101: 124 citations
+doi:10.1038/nature08278: 320 citations
+doi:10.1088/0004-637X/713/1/671: 193 citations
+doi:10.1088/1367-2630/11/7/073032: 45 citations
+doi:10.1088/0004-637X/715/2/1438: 104 citations
+doi:10.1088/1367-2630/12/5/053034: 94 citations
+doi:10.1103/PhysRevD.80.047101: 125 citations
 doi:10.1103/PhysRevD.80.042003: 96 citations
 doi:10.1103/PhysRevD.80.062001: 61 citations
-doi:10.1103/PhysRevD.80.102001: 109 citations
-doi:10.1088/0004-637X/701/2/L68: 57 citations
+doi:10.1103/PhysRevD.80.102001: 111 citations
+doi:10.1088/0004-637X/701/2/L68: 59 citations
 doi:10.1103/PhysRevD.80.102002: 37 citations
-doi:10.1103/PhysRevD.80.062002: 56 citations
-doi:10.1103/PhysRevD.79.122001: 149 citations
-doi:10.1103/PhysRevLett.102.111102: 96 citations
-doi:10.1103/PhysRevLett.101.211102: 81 citations
+doi:10.1103/PhysRevD.80.062002: 57 citations
+doi:10.1103/PhysRevD.79.122001: 151 citations
+doi:10.1103/PhysRevLett.102.111102: 98 citations
+doi:10.1103/PhysRevLett.101.211102: 82 citations
 doi:10.1088/0264-9381/25/24/245008: 20 citations
-doi:10.1088/0004-637X/706/1/L203, 10.1086/591526: 181 citations
-doi:10.1103/PhysRevD.79.022001: 100 citations
+doi:10.1088/0004-637X/706/1/L203, 10.1086/591526: 184 citations
+doi:10.1103/PhysRevD.79.022001: 101 citations
 doi:10.1088/0264-9381/25/11/114051: 26 citations
-doi:10.1088/0034-4885/72/7/076901: 890 citations
-doi:10.1103/PhysRevD.74.082005: 92 citations
+doi:10.1088/0034-4885/72/7/076901: 898 citations
+doi:10.1103/PhysRevD.74.082005: 93 citations
