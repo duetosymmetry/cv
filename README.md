@@ -7,7 +7,9 @@
 # Leo's curriculum vitae LaTeX source
 
 Please feel free to clone this repo if you like the style and want to use it for your CV.  If you're going to customize it, you need to know the layout of the contents:
-- [LeoCStein.tex](LeoCStein.tex): The top-level file. Includes all content *except* for list of publications, list of talks, and contact info.
+- [LeoCStein.tex](LeoCStein.tex): The top-level file. Compiling this
+  gives the full CV. However the sources for list of publications,
+  list of talks, and contact info are in other files (listed below).
 - [LeoCStein-NoPubs.tex](LeoCStein-NoPubs.tex): Another top-level file, which just sets a flag and includes the above. Generates a CV without pub list.
 - [LeoCStein-PubsOnly.tex](LeoCStein-PubsOnly.tex): Another top-level file. Generates just a publication list (with contact info header).
 
