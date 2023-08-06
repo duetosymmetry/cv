@@ -1,7 +1,18 @@
 \newcommand{\arxiv}[1]{[\href{http://arxiv.org/abs/#1}{arXiv:#1}]}
-% Citation counts last updated 5 Feb 2021
-\newcommand{\citeCount}[1]{(#1 citations)}
-\renewcommand{\citeCount}[1]{}
+% Citation counts last updated 2023-08-06
+\def\zero{0}
+\def\one{1}
+\newcommand{\citeCount}[1]{%
+  \def\val{#1}
+  \ifx\val\zero%
+  \else%
+    \ifx\val\one%
+    (1~citation)%
+    \else%
+    (#1~citations)%
+    \fi%
+  \fi}
+%\renewcommand{\citeCount}[1]{}
 
 \newcounter{numPubs}
 \newcounter{pubCounter}
@@ -21,58 +32,65 @@
 
 %%%%%%%%%%
 %%%%%%%%%%
-%%% As of 2022-09-15
+%%% As of 2023-08-06
 %%%%%%%%%%
 %%%%%%%%%%
-% \section{\sc Publication Summary}
-% {\bf h-index ---}%
-% As of 2022-09-05: 57 (according to Google Scholar), or 49 (according
-% to INSPIRE).  Both include collaboration papers.
+\newif\ifshowpubsummary
+%%% Comment out the next line to omit the publication summary
+\showpubsummarytrue
+%%%
+\ifshowpubsummary
+\section{\sc Publication Summary}
+{\bf h-index ---}%
+As of 2023-08-06: 59 (according to Google Scholar), or 50 (according
+to INSPIRE).  Both include collaboration papers.
 
-% {\bf Top five cited ---}%
-% Excluding LIGO/Virgo collaboration papers.  Citation counts from
-% Google Scholar.
-% \begin{enumerate}
-% \item
-%   Berti, E., (5 authors), {\bf Stein,~L.~C.}, (46 more authors)
-%   (2015)
-%   {\it Testing General Relativity with Present and Future
-%     Astrophysical Observations},
-%   \href{http://dx.doi.org/10.1088/0264-9381/32/24/243001}{Class. Quantum Grav. {\bf 32} 243001}
-%   \arxiv{1501.07274}.
-%   \citeCount{1061}
-% \item
-%   Barack,~L., {\it et al.}
-%   (2019)
-%   {\it Black holes, gravitational waves and fundamental physics: a roadmap},
-%   \href{https://doi.org/10.1088/1361-6382/ab0587}{Class.~Quantum Grav.~{\bf 36} 143001}
-%   \arxiv{1806.05195}.
-%   \citeCount{477}
-% \item
-%   Yunes,~N., {\bf Stein,~L.~C.}
-%   (2011),
-%   {\it Nonspinning black holes in alternative theories of gravity},
-%   \href{http://dx.doi.org/10.1103/PhysRevD.83.104002}{Phys.~Rev.~D~{\bf 83}~104002}
-%   \arxiv{1101.2921}.
-%   \citeCount{213}
-% \item
-%   Boyle,~M., {\it et al.} ({\bf LCS} is corresponding author)
-%   (2019)
-%   {\it The SXS Collaboration catalog of binary black hole simulations},
-%   \href{https://doi.org/10.1088/1361-6382/ab34e2}{Class.~Quantum Grav.~{\bf 36} 195006}
-%   \arxiv{1904.04831}.
-%   \citeCount{211}
-% \item
-%   Varma,~V, {\it et al.}
-%   (2019)
-%   {\it Surrogate models for precessing binary black hole simulations with
-%   unequal masses},
-%   \href{https://doi.org/10.1103/PhysRevResearch.1.033015}{Phys.~Rev.~Research~{\bf 1},~033015}
-%   \arxiv{1905.09300}.
-%   \citeCount{197}
-% \end{enumerate}
+{\bf Top five cited ---}%
+Excluding LIGO/Virgo collaboration papers.  Citation counts from
+Google Scholar.
+\begin{enumerate}
+\item
+  Berti, E., (5 authors), {\bf Stein,~L.~C.}, (46 more authors)
+  (2015)
+  {\it Testing General Relativity with Present and Future
+    Astrophysical Observations},
+  \href{http://dx.doi.org/10.1088/0264-9381/32/24/243001}{Class. Quantum Grav. {\bf 32} 243001}
+  \arxiv{1501.07274}.
+  \citeCount{1226}
+\item
+  Barack,~L., {\it et al.}
+  (2019)
+  {\it Black holes, gravitational waves and fundamental physics: a roadmap},
+  \href{https://doi.org/10.1088/1361-6382/ab0587}{Class.~Quantum Grav.~{\bf 36} 143001}
+  \arxiv{1806.05195}.
+  \citeCount{584}
+\item
+  Boyle,~M., {\it et al.} ({\bf LCS} is corresponding author)
+  (2019)
+  {\it The SXS Collaboration catalog of binary black hole simulations},
+  \href{https://doi.org/10.1088/1361-6382/ab34e2}{Class.~Quantum Grav.~{\bf 36} 195006}
+  \arxiv{1904.04831}.
+  \citeCount{270}
+\item
+  Varma,~V, {\it et al.}
+  (2019)
+  {\it Surrogate models for precessing binary black hole simulations with
+  unequal masses},
+  \href{https://doi.org/10.1103/PhysRevResearch.1.033015}{Phys.~Rev.~Research~{\bf 1},~033015}
+  \arxiv{1905.09300}.
+  \citeCount{256}
+\item
+  Yunes,~N., {\bf Stein,~L.~C.}
+  (2011),
+  {\it Nonspinning black holes in alternative theories of gravity},
+  \href{http://dx.doi.org/10.1103/PhysRevD.83.104002}{Phys.~Rev.~D~{\bf 83}~104002}
+  \arxiv{1101.2921}.
+  \citeCount{233}
+\end{enumerate}
+\else% don't show pub summary
+\fi
 
-% \renewcommand{\citeCount}[1]{}
+%\renewcommand{\citeCount}[1]{}
 
 \section{\sc Submitted Publications}
 %\addtocounter{pubCounter}{-1}
@@ -82,7 +100,7 @@
   (2023)
   {\it Numerical relativity surrogate model with memory effects and post-Newtonian hybridization},
   \arxiv{2306.03148}.
-  \citeCount{0}
+  \citeCount{1}
 \item
   Bronicki,~D.,
   Cárdenas-Avendaño,~A.,
@@ -90,7 +108,7 @@
   (2022)
   {\it Tidally-induced nonlinear resonances in EMRIs with an analogue model},
   \arxiv{2203.08841}.
-  \citeCount{2}
+  \citeCount{8}
 \item
   Samanta,~R.,
   Tanay,~S.,
@@ -98,7 +116,7 @@
   (2022)
   {\it Closed-form solutions of spinning, eccentric binary black holes at 1.5 post-Newtonian order},
   \arxiv{2210.01605}.
-  \citeCount{0}
+  \citeCount{2}
   \setcounter{pubCounter}{\value{enumi}}
 \end{etaremune}
 
@@ -134,7 +152,7 @@ collaboration publications. I only list short author-list publications below.
   (2023)
   {\it Numerical simulations of black hole--neutron star mergers in scalar-tensor gravity},
   \arxiv{2304.11836}.
-  \citeCount{0}
+  \citeCount{1}
 \item
   Tanay,~S.,
   {\bf Stein,~L.~C.},
@@ -144,7 +162,7 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1103/PhysRevD.107.103040}%
   {Phys.~Rev.~D~{\bf 107},~103040}
   \arxiv{2110.15351}.
-  \citeCount{2}
+  \citeCount{7}
 \item
   Grant,~A.~M.,
   Saffer,~A.,
@@ -155,7 +173,7 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1103/PhysRevD.107.044041}%
   {Phys.~Rev.~D~{\bf 107},~044041}
   \arxiv{2208.02123}.
-  \citeCount{0}
+  \citeCount{1}
 \item
   Mitman,~K.,
   Lagos,~M.,
@@ -167,7 +185,7 @@ collaboration publications. I only list short author-list publications below.
   \arxiv{2208.07380}.
   \raisebox{.15em}{\aldine} Editors' Suggestion,
   \href{https://physics.aps.org/articles/v16/29}{Featured in Physics}.
-  \citeCount{0}
+  \citeCount{46}
 \item
   Clark,~W.~A.,
   Gomes,~M.~W.,
@@ -178,7 +196,7 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1137/21M1436087}%
   {SIAM Review 2023 65:1, 291-315}
   \arxiv{2107.11624}.
-  \citeCount{0}
+  \citeCount{1}
 \item
   Mitman,~K.,
   {\bf Stein,~L.~C.},
@@ -188,7 +206,7 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1103/PhysRevD.106.084029}%
   {Phys.~Rev.~D~{\bf 106},~084029}
   \arxiv{2208.04356}.
-  \citeCount{0}
+  \citeCount{7}
 \item
   Okounkova,~M,
   Farr,~W.~M.,
@@ -199,7 +217,7 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1103/PhysRevD.106.044067}%
   {Phys.~Rev.~D~{\bf 106},~044067}
   \arxiv{2101.11153}.
-  \citeCount{14}
+  \citeCount{39}
 \item
   Magaña~Zertuche,~L.,
   Mitman,~K.,
@@ -211,7 +229,7 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1103/PhysRevD.105.104015}%
   {Phys.~Rev.~D~{\bf 105},~104015}
   \arxiv{2110.15922}.
-  \citeCount{5}
+  \citeCount{27}
 \item
   Gálvez Ghersi,~J.~T.,
   {\bf Stein,~L.~C.},
@@ -220,7 +238,7 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1103/PhysRevE.104.034219}%
   {Phys.~Rev.~E~{\bf 104},~034219}
   \arxiv{2106.08410}.
-  \citeCount{4}
+  \citeCount{11}
 \item
   Mitman,~K.,
   Khera,~N.,
@@ -232,7 +250,7 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1103/PhysRevD.104.024051}%
   {Phys.~Rev.~D~{\bf 104},~024051}
   \arxiv{2105.02300}.
-  \citeCount{9}
+  \citeCount{17}
 \item
   Iozzo,~D.~A.~B.,
   Khera,~N.,
@@ -243,7 +261,7 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1103/PhysRevD.103.124029}%
   {Phys.~Rev.~D~{\bf 103},~124029}
   \arxiv{2104.07052}.
-  \citeCount{7}
+  \citeCount{15}
 \item
   Tahura,~S.,
   Nichols,~D.~A.,
@@ -255,7 +273,7 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1103/PhysRevD.103.104026}%
   {Phys.~Rev.~D~{\bf 103},~104026}
   \arxiv{2007.13799}.
-  \citeCount{18}
+  \citeCount{27}
 \item
   Tanay,~S.,
   {\bf Stein,~L.~C.},
@@ -265,7 +283,7 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1103/PhysRevD.103.064066}%
   {Phys.~Rev.~D~{\bf 103},~064066}
   \arxiv{2012.06586}.
-  \citeCount{5}
+  \citeCount{13}
 \item
   Gálvez~Ghersi,~J.~T.,
   {\bf Stein,~L.~C.},
@@ -274,7 +292,7 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1088/1361-6382/abcfd2}
   {Class.~Quantum Grav.~{\bf 38} 045012}
   \arxiv{2007.11578}.
-  \citeCount{5}
+  \citeCount{6}
 \item
   Okounkova,~M.,
   {\bf Stein,~L.~C.},
@@ -285,7 +303,7 @@ collaboration publications. I only list short author-list publications below.
   {\it Numerical relativity simulation of GW150914 beyond general relativity},
   \href{https://doi.org/10.1103/PhysRevD.101.104016}{Phys.~Rev.~D~{\bf 101},~104016}
   \arxiv{1911.02588}.
-  \citeCount{47}
+  \citeCount{73}
 \item
   {\bf Stein,~L.~C.},
   Warburton,~N.,
@@ -293,7 +311,7 @@ collaboration publications. I only list short author-list publications below.
   {\it Location of the last stable orbit in Kerr spacetime},
   \href{https://doi.org/10.1103/PhysRevD.101.064007}{Phys.~Rev.~D~{\bf 101},~064007}
   \arxiv{1912.07609}.
-  \citeCount{19}
+  \citeCount{34}
 \item
   Okounkova,~M.,
   {\bf Stein,~L.~C.},
@@ -303,7 +321,7 @@ collaboration publications. I only list short author-list publications below.
   {\it Numerical binary black hole collisions in dynamical Chern-Simons gravity},
   \href{https://doi.org/10.1103/PhysRevD.100.104026}{Phys.~Rev.~D~{\bf 100},~104026}
   \arxiv{1906.08789}.
-  \citeCount{57}
+  \citeCount{82}
 \item
   Varma,~V, {\it et al.}
   (2019)
@@ -311,7 +329,7 @@ collaboration publications. I only list short author-list publications below.
   unequal masses},
   \href{https://doi.org/10.1103/PhysRevResearch.1.033015}{Phys.~Rev.~Research~{\bf 1},~033015}
   \arxiv{1905.09300}.
-  \citeCount{192}
+  \citeCount{205}
 \item
   {\bf Stein,~L.~C.},
   (2019)
@@ -319,21 +337,21 @@ collaboration publications. I only list short author-list publications below.
   {\it {\tt qnm:} A Python package for calculating Kerr quasinormal modes, separation constants, and spherical-spheroidal mixing coefficients},
   \href{https://doi.org/10.21105/joss.01683}{J.~Open~Source~Softw., 4(42), 1683}
   \arxiv{1908.10377}.
-  \citeCount{21}
+  \citeCount{43}
 \item
   Boyle,~M., {\it et al.} ({\bf LCS} is corresponding author)
   (2019)
   {\it The SXS Collaboration catalog of binary black hole simulations},
   \href{https://doi.org/10.1088/1361-6382/ab34e2}{Class.~Quantum Grav.~{\bf 36} 195006}
   \arxiv{1904.04831}.
-  \citeCount{200}
+  \citeCount{245}
 \item
   Barack,~L., {\it et al.}
   (2019)
   {\it Black holes, gravitational waves and fundamental physics: a roadmap},
   \href{https://doi.org/10.1088/1361-6382/ab0587}{Class.~Quantum Grav.~{\bf 36} 143001}
   \arxiv{1806.05195}.
-  \citeCount{445}
+  \citeCount{592}
 \item
   Varma,~V., {\bf Stein,~L.~C.}, Gerosa,~D.,
   (2019)
@@ -348,14 +366,14 @@ collaboration publications. I only list short author-list publications below.
   {\it High-accuracy mass, spin, and recoil predictions of generic black-hole merger remnants},
   \href{https://doi.org/10.1103/PhysRevLett.122.011101}{Phys.~Rev.~Lett.~{\bf 122},~011101}
   \arxiv{1809.09125}.
-  \citeCount{69}
- \item
+  \citeCount{92}
+\item
   Isi,~M., {\bf Stein,~L.~C.}
   (2018)
   {\it Measuring stochastic gravitational-wave energy beyond general relativity},
   \href{https://doi.org/10.1103/PhysRevD.98.104025}{Phys.~Rev.~D~{\bf 98},~104025}
   \arxiv{1807.02123}.
-  \citeCount{20}
+  \citeCount{26}
 \item
   Prabhu,~K., {\bf Stein,~L.~C.}
   (2018)
@@ -364,28 +382,28 @@ collaboration publications. I only list short author-list publications below.
   \href{https://doi.org/10.1103/PhysRevD.98.021503}{Phys.~Rev.~D~{\bf 98},~021503(R)}
   (Rapid Communication)
   \arxiv{1805.02668}.
-  \citeCount{38}
+  \citeCount{46}
 \item
   Gerosa,~D., H\'ebert,~F., {\bf Stein,~L.~C.}
   (2018)
   {\it Black-hole kicks from numerical-relativity surrogate models},
   \href{https://doi.org/10.1103/PhysRevD.97.104049}{Phys.~Rev.~D~{\bf 97},~104049}
   \arxiv{1802.04276}.
-  \citeCount{38}
+  \citeCount{45}
 \item
   Chen,~B., {\bf Stein,~L.~C.}
   (2018)
   {\it Deformation of extremal black holes from stringy interactions},
   \href{https://doi.org/10.1103/PhysRevD.97.084012}{Phys.~Rev.~D~{\bf 97},~084012}
   \arxiv{1802.02159}.
-  \citeCount{11}
+  \citeCount{17}
 \item
   Chen,~B., {\bf Stein,~L.~C.}
   (2017)
   {\it Separating metric perturbations in near-horizon extremal Kerr},
   \href{https://doi.org/10.1103/PhysRevD.96.064017}{Phys.~Rev.~D~{\bf 96},~064017}
   \arxiv{1707.05319}.
-  \citeCount{6}
+  \citeCount{8}
 \item
   Okounkova,~M.,
   {\bf Stein,~L.~C.},
@@ -396,7 +414,7 @@ collaboration publications. I only list short author-list publications below.
     I. Scalar field},
   \href{https://doi.org/10.1103/PhysRevD.96.044020}{Phys.~Rev.~D~{\bf 96},~044020}
   \arxiv{1705.07924}.
-  \citeCount{83}
+  \citeCount{111}
 \item
   Tso,~R., Isi,~M., Chen,~Y., {\bf Stein,~L.~C.}
   (2017)
@@ -411,7 +429,7 @@ collaboration publications. I only list short author-list publications below.
   {\it Extremal Black Holes in Dynamical Chern-Simons Gravity},
   \href{http://dx.doi.org/10.1088/0264-9381/33/23/235013}{Class.~Quantum Grav.~{\bf 33} 235013}
   \arxiv{1512.05453}.
-  \citeCount{38}
+  \citeCount{44}
 \item
   Flanagan,~\'E.~\'E., Nichols,~D.~A., {\bf Stein,~L.~C.}, Vines,~J.
   (2016)
@@ -426,7 +444,7 @@ collaboration publications. I only list short author-list publications below.
   {\it Black Hole Based Tests of General Relativity},
   \href{http://dx.doi.org/10.1088/0264-9381/33/5/054001}{Class.~Quantum Grav.~{\bf 33} 054001}
   \arxiv{1602.02413}.
-  \citeCount{139}
+  \citeCount{163}
 \item
   Yagi,~K., {\bf Stein,~L.~C.}, Yunes, N.
   (2016)
@@ -434,7 +452,7 @@ collaboration publications. I only list short author-list publications below.
     in Binary Pulsars},
   \href{http://dx.doi.org/doi:10.1103/PhysRevD.93.024010}{Phys.~Rev.~D~{\bf 93}~024010}
   \arxiv{1510.02152}.
-  \citeCount{97}
+  \citeCount{112}
 \item
   Berti, E., (5 authors), {\bf Stein,~L.~C.}, (46 more authors)
   (2015)
@@ -442,21 +460,21 @@ collaboration publications. I only list short author-list publications below.
     Astrophysical Observations},
   \href{http://dx.doi.org/10.1088/0264-9381/32/24/243001}{Class. Quantum Grav. {\bf 32} 243001}
   \arxiv{1501.07274}.
-  \citeCount{915}
+  \citeCount{1099}
 \item
   Tsang,~D., Galley,~C.~R., {\bf Stein,~L.~C.}, Turner,~A.
   (2015)
   {\it ``Slimplectic'' Integrators: Variational Integrators for General Nonconservative Systems},
   \href{http://dx.doi.org/10.1088/2041-8205/809/1/L9}{ApJ {\bf 809} L9}
   \arxiv{1506.08443}.
-  \citeCount{21}
+  \citeCount{30}
 \item
   Yagi,~K., {\bf Stein,~L.~C.}, Pappas,~G., Yunes,~N., Apostolatos,~T.
   (2014)
   {\it Why I-Love-Q: Explaining why universality emerges in compact objects},
   \href{http://dx.doi.org/10.1103/PhysRevD.90.063010}{Phys.~Rev.~D~{\bf 90}~063010}
   \arxiv{1406.7587}.
-  \citeCount{67}
+  \citeCount{72}
 \item
   {\bf Stein,~L.~C.}
   (2014)
@@ -464,49 +482,49 @@ collaboration publications. I only list short author-list publications below.
     Decoupling limit solutions and breakdown},
   \href{http://dx.doi.org/10.1103/PhysRevD.90.044061}{Phys.~Rev.~D~{\bf 90}~044061}
   \arxiv{1407.2350}.
-  \citeCount{40}
+  \citeCount{43}
 \item
   {\bf Stein,~L.~C.}, Yagi,~K., Yunes,~N.
   (2014)
   {\it Three-Hair Newtonian Relations for Rotating Stars},
   \href{http://dx.doi.org/10.1088/0004-637X/788/1/15}{ApJ~{\bf 788}~15}
   \arxiv{1312.4532}.
-  \citeCount{53}
+  \citeCount{59}
 \item
   {\bf Stein,~L.~C.}, Yagi,~K.
   (2014)
   {\it Parameterizing and constraining scalar corrections to general relativity},
   \href{http://dx.doi.org/10.1103/PhysRevD.89.044026}{Phys.~Rev.~D~{\bf 89}~044026}
   \arxiv{1310.6743}.
-  \citeCount{27}
+  \citeCount{29}
 \item
   Yagi,~K., {\bf Stein,~L.~C.}, Yunes,~N., Tanaka,~T.
   (2013)
   {\it Isolated and Binary Neutron Stars in Dynamical Chern-Simons Gravity},
   \href{http://dx.doi.org/10.1103/PhysRevD.87.084058}{Phys.~Rev.~D~{\bf 87}~084058}
   \arxiv{1302.1918}.
-  \citeCount{77}
+  \citeCount{89}
 \item
   Yagi,~K., {\bf Stein,~L.~C.}, Yunes,~N., Tanaka,~T.
   (2012),
   {\it Post-Newtonian, Quasi-Circular Binary Inspirals in Quadratic Modified Gravity},
   \href{http://dx.doi.org/10.1103/PhysRevD.85.064022}{Phys.~Rev.~D~{\bf 85}~064022}
   \arxiv{1110.5950}.
-  \citeCount{141}
+  \citeCount{175}
 \item
   Vigeland,~S., Yunes,~N., {\bf Stein,~L.~C.}
   (2011),
   {\it Bumpy black holes in alternative theories of gravity},
   \href{http://dx.doi.org/10.1103/PhysRevD.83.104027}{Phys.~Rev.~D~{\bf 83}~104027}
   \arxiv{1102.3706}.
-  \citeCount{129}
+  \citeCount{141}
 \item
   Yunes,~N., {\bf Stein,~L.~C.}
   (2011),
   {\it Nonspinning black holes in alternative theories of gravity},
   \href{http://dx.doi.org/10.1103/PhysRevD.83.104002}{Phys.~Rev.~D~{\bf 83}~104002}
   \arxiv{1101.2921}.
-  \citeCount{181}
+  \citeCount{202}
 \item
   {\bf Stein,~L. C.}, Yunes,~N.
   (2011),
@@ -514,7 +532,7 @@ collaboration publications. I only list short author-list publications below.
     alternative theories of gravity},
   \href{http://dx.doi.org/10.1103/PhysRevD.83.064038}{Phys.~Rev.~D~{\bf 83}~064038}
   \arxiv{1012.3144}.
-  \citeCount{57}
+  \citeCount{62}
 \item
   Lutomirski,~A., Tegmark,~M., Sanchez,~N.~J., {\bf
     Stein,~L.~C.}, Urry,~W.~L., Zaldarriaga,~M.
@@ -532,7 +550,7 @@ collaboration publications. I only list short author-list publications below.
     gravitational-wave burst searches},
   \href{http://dx.doi.org/10.1088/1367-2630/12/5/053034}{New~J.~Phys.~{\bf 12}~053034}
   \arxiv{0908.3665}.
-  \citeCount{118}
+  \citeCount{130}
 \item
   Chatterji,~S., Lazzarini,~A., {\bf Stein,~L.}, Sutton,~P.,
   Searle,~A.
@@ -541,7 +559,7 @@ collaboration publications. I only list short author-list publications below.
     discriminating gravitational-wave bursts from instrumental noise},\\
   \href{http://dx.doi.org/10.1103/PhysRevD.74.082005}{Phys.~Rev.~D~{\bf 74}~082005}
   \arxiv{gr-qc/0605002}.
-  \citeCount{103}
+  \citeCount{113}
   \setcounter{pubCounter}{\value{enumi}}
 \end{etaremune}
 
@@ -554,7 +572,7 @@ collaboration publications. I only list short author-list publications below.
   {\it The principle of stationary nonconservative action for
     classical mechanics and field theories},
   \arxiv{1412.3082}.
-  \citeCount{35}
+  \citeCount{39}
 \item
   {\bf Stein,~L.~C.}
   (2014),
@@ -572,7 +590,7 @@ collaboration publications. I only list short author-list publications below.
   (2011)
   {\it The Geometry of Hamiltonian Monte Carlo},
   \arxiv{1112.4118}.
-  \citeCount{12}
+  \citeCount{14}
 \item
   {\bf Stein,~L.~C.}
   (2009),
