@@ -12,12 +12,14 @@
     (#1~citations)%
     \fi%
   \fi}
-%\renewcommand{\citeCount}[1]{}
+
+% Comment out to show, uncomment to hide
+\renewcommand{\citeCount}[1]{}
 
 \newcounter{numPubs}
 \newcounter{pubCounter}
 
-\setcounter{numPubs}{58}
+\setcounter{numPubs}{59}
 \setcounter{pubCounter}{\value{numPubs}}
 
 % \section{\sc Publications in Progress}
@@ -96,6 +98,12 @@ Excluding LIGO/Virgo collaboration papers.
 %\addtocounter{pubCounter}{-1}
 \begin{etaremune}[start=\value{pubCounter}]
 \item
+  {\bf Stein,~L.~C.},
+  (2024)
+  {\it Can a radiation gauge be horizon-locking?},
+  \arxiv{2404.10113}.
+  \citeCount{0}
+\item
   Sun,~D.,
   Boyle,~M.,
   Mitman,~K.,
@@ -107,7 +115,7 @@ Excluding LIGO/Virgo collaboration papers.
   {\it Optimizing post-Newtonian parameters and fixing the BMS frame for numerical-relativity waveform hybridizations},
   \arxiv{2403.10278}.
   \citeCount{0}
-  %\setcounter{pubCounter}{\value{enumi}}
+  \setcounter{pubCounter}{\value{enumi}}
 \end{etaremune}
 
 % \section{\sc Accepted Publications}
