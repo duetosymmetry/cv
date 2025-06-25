@@ -43,6 +43,16 @@
 % I want small caps for the section style
 \def\sectionfont{\sc}
 
+% Generate a PDF TOC
+\let\oldsection\section
+\def\section#1{\oldsection{#1}%
+\phantomsection%
+\addcontentsline{toc}{section}{#1}%
+}
+
+% The above seems to screw up the spacing for sections that start with lists...
+\newcommand{\secstartswithlist}{\leavevmode \vspace{-\baselineskip}}
+
 \begin{document}
 
 \newcommand{\myname}{Leo C.~Stein --- Publications}
